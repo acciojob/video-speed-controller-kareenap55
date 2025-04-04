@@ -1,54 +1,66 @@
 
 /* Your CSS Code here. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 body {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     background-color: #222;
-     color: white;
-     font-family: Arial, sans-serif;
- }
- 
- .player {
-     max-width: 800px;
-     width: 100%;
-     background: black;
-     border-radius: 10px;
-     overflow: hidden;
- }
- 
- .player__video {
-     width: 100%;
-     display: block;
- }
- 
- .player__controls {
-     display: flex;
-     align-items: center;
-     padding: 10px;
-     gap: 10px;
-     background: #333;
- }
- 
- .player__button {
-     background: none;
-     border: none;
-     color: white;
-     font-size: 20px;
-     cursor: pointer;
- }
- 
- .progress {
-     flex: 1;
-     height: 5px;
-     background: gray;
-     cursor: pointer;
-     position: relative;
- }
- 
- .progress__filled {
-     width: 50%;
-     height: 100%;
-     background: red;
- }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+}
+
+.player {
+    max-width: 700px;
+    background: #000;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.player__video {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    background: #333;
+    padding: 10px;
+    align-items: center;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.player__slider {
+    width: 100px;
+    margin: 0 10px;
+}
+
+.progress {
+    flex: 1;
+    height: 5px;
+    background: gray;
+    cursor: pointer;
+}
+
+.progress__filled {
+    width: 0%;
+    background: red;
+    height: 100%;
+}
